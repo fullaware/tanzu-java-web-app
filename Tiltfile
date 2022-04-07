@@ -2,6 +2,8 @@ SOURCE_IMAGE = os.getenv("SOURCE_IMAGE", default='crs.tap.fullaware.io/tanzu-jav
 LOCAL_PATH = os.getenv("LOCAL_PATH", default='.')
 NAMESPACE = os.getenv("NAMESPACE", default='default')
 
+# allow_k8s_contexts('gke_newell-tanzu_us-east1_tapdemo')
+
 k8s_custom_deploy(
     'tanzu-java-web-app',
     apply_cmd="tanzu apps workload apply -f config/workload.yaml --live-update" +
