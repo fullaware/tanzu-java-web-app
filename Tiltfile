@@ -1,8 +1,8 @@
-SOURCE_IMAGE = os.getenv("SOURCE_IMAGE", default='crs.tap.fullaware.io/tanzu-java-web-app-source')
+SOURCE_IMAGE = os.getenv("SOURCE_IMAGE", default='crs.tap.fullaware.net/tanzu-java-web-app-source')
 LOCAL_PATH = os.getenv("LOCAL_PATH", default='.')
 NAMESPACE = os.getenv("NAMESPACE", default='default')
 
-allow_k8s_contexts('gke_newell-tanzu_us-east4_taplivedemo')
+allow_k8s_contexts('taplab')
 
 k8s_custom_deploy(
     'tanzu-java-web-app',
